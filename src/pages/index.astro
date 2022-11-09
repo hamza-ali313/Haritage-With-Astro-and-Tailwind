@@ -1,0 +1,161 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import MyNavbar from "../components/MyNavbar";
+import Home from "../components/Home";
+import OurStory from "../components/OurStory";
+import Services from "../components/Services";
+import ProductMSD from "../components/ProductMSD";
+import Ourgallery from "../components/Ourgallery";
+import Contacts from "../components/Contacts";
+import OurLocation from "../components/OurLocation";
+import Footer from "../components/Footer";
+import CurrrentProjects from "../components/CurrrentProjects";
+import OurReviews from "../components/OurReviews";
+import NewsBlogs from "../components/NewsBlogs";
+
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="home-bg">
+  <MyNavbar  client:load/>
+  <Home />
+  </main>
+  <OurStory/>
+  <Services />
+  <ProductMSD client:visible/>
+  <CurrrentProjects/>
+  <OurReviews />
+  <Ourgallery client:visible />
+  <Contacts />
+  <NewsBlogs />
+  <OurLocation />
+  <Footer />
+
+
+</Layout>
+<script is:inline>
+$(".yrux-slider").slick({
+  // infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  centerMode: true,
+  responsive: [
+    {
+      breakpoint: 519,
+      settings: {
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    }
+  ]
+});
+$(".review-slider").slick({
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 519,
+      settings: {
+        slidesToScroll: 1,
+        arrows: false,
+        dots:true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToScroll: 1,
+        arrows: false,
+        dots:true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        arrows: false,
+        dots:true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToScroll: 1,
+        arrows: false,
+        dots:true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      },
+    },
+  ]
+});
+$(".blogs-slider").slick({
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+});
+// adding a class on scroll
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 50) {
+     $('#nav-header').addClass('bg-bg-nav pb-[13px] z-[999] shadow-1');
+     $('#nav-header').addClass('header#nav-header');
+     $('#navbar-brand-img').addClass('invert-[1]');
+     $('.haritage-nav a').addClass('text-nav-link');
+  } else {
+     $('#nav-header').removeClass('bg-bg-nav pb-[13px] z-[999] shadow-1');
+     $('#nav-header').removeClass('header#nav-header');
+     $('#navbar-brand-img').removeClass('invert-[1]');
+     $('.haritage-nav a').removeClass('text-nav-link');
+  }
+});
+
+
+
+
+
+
+</script>

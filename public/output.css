@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url("fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Gotham Book;
+  src: url("fonts/Gotham Book Font.otf");
+}
+.review-slider .slick-prev:before {
+  content: "\f104";
+  color: #000;
+  font-family: "FontAwesome";
+  font-size: 39px;
+}
+.review-slider .slick-next:before {
+  content: "\f105";
+  color: #000;
+  font-family: "FontAwesome";
+  font-size: 39px;
+}
+a {
+  transition: all 0.5s;
+}
+p {
+  margin-bottom: 1rem !important;
+}
+.blogs-slider .slick-prev:before {
+  content: "\f177";
+  font-family: fontawesome;
+  color: #7c96a6;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 10px;
+}
+.blogs-slider .slick-prev {
+  left: 1037px;
+  top: -80px;
+}
+.blogs-slider .slick-next {
+  right: 27px;
+  top: -80px;
+}
+.blogs-slider .slick-next:before {
+  content: "\f178";
+  font-family: fontawesome;
+  color: #7c96a6;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 10px;
+}
+.productMSD-sec .fa-angle-right:before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin: 0 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.CurrrentProjects-sec .slick-current .btm-txt {
+  display: block;
+  position: absolute;
+  top: -15px;
+  margin-left: -560px;
+  font-family: Poppins-Regular;
+}
+.CurrrentProjects-sec .yrux-slider .slick-next {
+  color: red;
+  font-size: 0;
+  position: absolute;
+  top: 1px;
+  border: 1px solid #000;
+  height: 50px;
+  width: 50px;
+  left: auto;
+  right: 390px;
+  transform: skew(-17deg, 0deg);
+}
+.CurrrentProjects-sec .yrux-slider .slick-track {
+  margin-top: 15px;
+}
+.CurrrentProjects-sec .yrux-slider .slick-prev {
+  color: red;
+  font-size: 0;
+  position: absolute;
+  top: 1px;
+  border: 1px solid #000;
+  height: 50px;
+  width: 50px;
+  transform: skew(-17deg, 0deg);
+  left: auto;
+  right: 452px;
+  z-index: 1;
+}
+.CurrrentProjects-sec .slick-slide img {
+  display: block;
+  width: 100%;
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+.CurrrentProjects-sec .slick-slide:hover img {
+  opacity: 1;
+}
+.CurrrentProjects-sec .slider-sec .slick-slide {
+  background-color: #000;
+  border: 3px solid #fff;
+  margin: 0 8px;
+  margin-top: 105px;
+}
+
+.CurrrentProjects-sec .slick-slide:hover {
+  border-color: #48ff00;
+}
+.CurrrentProjects-sec .slick-current img {
+  opacity: 1;
+}
+.CurrrentProjects-sec .slick-current {
+  border: 3px solid #48ff00 !important;
+  background-color: transparent !important;
+}
+.CurrrentProjects-sec .slick-prev:before {
+  content: "\f104";
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-family: fontawesome;
+  transform: skew(-17deg, 0deg);
+}
+.CurrrentProjects-sec .slick-next:before {
+  content: "\f105";
+  color: #020202;
+  font-size: 35px;
+  font-family: fontawesome;
+  transform: skew(-17deg, 0deg);
+}
+.tabs {
+  cursor: pointer;
+}
+.productMSD-sec .tabs a {
+  transform: skew(-12deg, 0deg);
+}
+/* toggle class */
+.active-content {
+  display: flex !important;
+}
+/* react tabs */
+@media only screen and (min-width: 1366px) and (max-width: 1920px) {
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blogs-slider .slick-prev {
+    left: 770px;
+  }
+  .blogs-slider .slick-next {
+    right: 136px;
+  }
+  .CurrrentProjects-sec .slick-current .btm-txt {
+    margin-left: -334px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blogs-slider .slick-prev {
+    left: 603px;
+    top: -80px;
+}
+.CurrrentProjects-sec .slick-current .btm-txt {
+  margin-left: -368px;
+}
+}
+@media only screen and (min-width: 520px) and (max-width: 767px) {
+  .CurrrentProjects-sec .slick-current .btm-txt {
+    margin-left: -352px;
+  }
+  .blogs-slider .slick-prev {
+    left: 492px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 519px) {
+  .CurrrentProjects-sec .slick-current .btm-txt {
+    margin-left: 0px;
+  }
+  .blogs-slider .slick-prev {
+    left: 219px;
+  }
+  .OurLocation-sec {
+    overflow: hidden;
+  }
+  div#contact {
+    overflow: hidden;
+  }
+  /* header#nav-header {
+    background-color: #fff !important;
+    width: 100% !important;
+  } */
+  /* #nav-header img {
+    width: 50% !important;
+    filter: invert(1);
+  } */
+  #nav-header .flex {
+    display: flex !important;
+  }
+  .blogs-slider .slick-prev {
+    top: -13px;
+  }
+  .blogs-slider .slick-next {
+    top: -13px;
+  }
+}
